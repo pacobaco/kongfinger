@@ -15,6 +15,9 @@ for x in c:             # loop through vector varible c
 
 # matrix populates d
 
+for x in d:             # loop through the matrix by vector row
+  print x[1]            # print HBCU URL
+
 ****************************************************************************
 
 # current uses are collocation of index terms, href text term frequency, and image & email scraping
