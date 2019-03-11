@@ -16,7 +16,7 @@ for x in c:             # loop through vector varible c
 # matrix populates d
 
 for x in d:             # loop through the matrix by vector row
-  print x[1]            # print HBCU URL
+  print x[0], x[1]            # print HBCU university name and URL
 
 ****************************************************************************
 
