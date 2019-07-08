@@ -1,23 +1,14 @@
-# kongfinger
-# this code scans international newspapers as matrix
+<?php
+$row = 1;
+if (($handle = fopen("HBCU.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        $num = count($data);
+        echo "<p> $num fields in line $row: <br /></p>\n";
+        $row++;
+    for ($c=0; $c < $num; $c++) {
+        echo $data[$c] . "<br />\n";
+    }
+}
+fclose($handle);
 
-# sample code to populate matrix
-a = open('HBCU.csv') # open file from directory
-b = a.read() # read file contents as string
-c = b.split('\n') # divide with \n as delimiter
-
-# blank list variable
-d = []
-
-for x in c:             # loop through vector varible c
-  e = x.split(',')      # split by comma delimiter
-  d.append(e)           # append each vector into matrix row
-
-# matrix populates d
-
-for x in d:             # loop through the matrix by vector row
-  print x[0], x[1]            # print HBCU university name and URL
-
-****************************************************************************
-
-# current uses are collocation of index terms, href text term frequency, and image & email scraping
+?>
